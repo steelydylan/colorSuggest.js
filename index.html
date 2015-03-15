@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>colorSuggest.js</title>
+</head>
+<body>
+	<img src="test.png" id="test">
+	<script src="jquery.js"></script>
+	<script src="colorSuggest.js"></script>
+	<script>
+		$(function(){
+			$("#test")
+			.colorSuggest()
+			.done(function(val){
+				console.log('%c'+val[0].color+' is most often used','color:'+val[0].color);
+			});
+		});
+	</script>
+</body>
+</html>
